@@ -21,6 +21,8 @@
 
     .journal {
         position: unset;
+        color: white;
+        text-shadow: 2px 2px black;
     }
 
     .journal > embed {
@@ -49,10 +51,11 @@
 
         border: 2px solid black;
         border-radius: 5px;
-        background-color: rgba(206, 182, 148, 0.2);
+        background-color: rgba(255, 255, 255, 0.5);
 
         font-family: inherit;
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 25px;
     }
 
     .journal > form input:nth-of-type(1) {
@@ -72,12 +75,10 @@
 /* TABLET AND BIGGER */
 @media only screen and (min-width: 450px) {
 
-    body {
-        background-image: url("../media/img/truck.jpg");
-    }
-
     .journal {
         position: relative;
+        color: black;
+        text-shadow: none;
     }
 
     .journal > embed {
