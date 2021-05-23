@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GENERAL SETTINGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phasmophobia Tracker</title>
+    <!-- STYLESHEETS -->
+    <link rel="icon" type="image/x-icon" href="./media/img/favicon.ico">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- SCRIPTS -->
+    <script src="./js/data_Objectives.js"></script>
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <div class="journal">
+        <embed src="./media/img/journal_paper.png" alt="book">
+        <form method="get" action="journal.html">
+            <label for="GhostName">Ghost Name:</label><br>
+            <input type="text" id="GhostName" name="GhostName"><br>
+            <label for="Task1">Task 1:</label><br>
+            <select name="Task1" class="task" id="Task1"></select><br>
+            <label for="Task2">Task 2:</label><br>
+            <select name="Task2" class="task" id="Task2"></select><br>
+            <label for="Task3">Task 3:</label><br>
+            <select name="Task3" class="task" id="Task3"></select><br>
+            <input type="submit" value="Start Round">
+        </form>
+    </div>
+</body>
+</html>
