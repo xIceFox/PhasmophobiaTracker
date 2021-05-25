@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- GENERAL SETTINGS -->
     <meta charset="UTF-8">
@@ -8,166 +9,168 @@
     <link rel="icon" type="image/x-icon" href="./media/img/favicon.ico">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/journal.css">
+    <link rel="stylesheet" href="./css/temp.css">
     <!-- SCRIPTS -->
-    <script src="./js/data_Objectives.js"></script>
+    <script src="./js/dataObjectives.js"></script>
+    <script src="./js/dataGhosts.js"></script>
     <script src="./js/journal.js" defer></script>
     <script src="./js/timer.js" defer></script>
-    <script src="./js/GhostSelector.js"></script>
+    <script src="./js/ghostSelector.js"></script>
 </head>
+
 <body>
-<div id="GhostNameEvidences">
-    <div>
-        <h2>Ghost Name: </h2>
-        <h2 id="GhostName"></h2>
+    <button id="reset">R-E-S-E-T</button>
+    <div id="GhostNameEvidences">
+        <div>
+            <h2>Ghost Name: </h2>
+            <h2 id="GhostName"></h2>
+        </div>
+        <div>
+            <p>Task1: </p>
+            <p id="Task1"></p>
+        </div>
+        <div>
+            <p>Task2: </p>
+            <p id="Task2"></p>
+        </div>
+        <div>
+            <p>Task3: </p>
+            <p id="Task3"></p>
+        </div>
+        <p id="timer">0h 0m 0s</p>
+        <div id="ghostSelector">
+            <input type="checkbox" id="EMF5" onclick="toggleEvidence(1)">
+            <label for="EMF5" id="labelEMF5">EMF 5:</label><br>
+            
+            <input type="checkbox" id="SpiritBox" onclick="toggleEvidence(2)">
+            <label for="SpiritBox" id="labelSpiritBox">SpiritBox:</label><br>
+            
+            <input type="checkbox" id="Fingerprints" onclick="toggleEvidence(3)">
+            <label for="Fingerprints" id="labelFingerprints">Fingerprints:</label><br>
+            
+            <input type="checkbox" id="GhostOrb" onclick="toggleEvidence(4)">
+            <label for="GhostOrb" id="labelGhostOrb">Ghost Orb:</label><br>
+            
+            <input type="checkbox" id="GhostWriting" onclick="toggleEvidence(5)">
+            <label for="GhostWriting" id="labelGhostWriting">Ghost Writing:</label><br>
+            
+            <input type="checkbox" id="FreezingTemperatures" onclick="toggleEvidence(6)">
+            <label for="FreezingTemperatures" id="labelFreezingTemperatures">Freezing Temperatures:</label><br>
+            
+        </div><br>
+        <div id="Banshee">
+            <div>Banshee</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+            </ul>
+        </div>
+        <div id="Demon">
+            <div>Demon</div>
+            <ul>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+                <li class="GhostWriting">Ghost Writing</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Hantu">
+            <div>Hantu</div>
+            <ul>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="GhostWriting">Ghost Writing</li>
+            </ul>
+        </div>
+        <div id="Jinn">
+            <div>Jinn</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Mare">
+            <div>Mare</div>
+            <ul>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Oni">
+            <div>Oni</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="GhostWriting">Ghost Writing</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Phantom">
+            <div>Phantom</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+                <li class="GhostOrb">Ghost Orb</li>
+            </ul>
+        </div>
+        <div id="Poltergeist">
+            <div>Poltergeist</div>
+            <ul>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Revenant">
+            <div>Revenant</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="GhostWriting">Ghost Writing</li>
+            </ul>
+        </div>
+        <div id="Shade">
+            <div>Shade</div>
+            <ul>
+                <li class="EMF5">EMF5</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="GhostWriting">Ghost Writing</li>
+            </ul>
+        </div>
+        <div id="Spirit">
+            <div>Spirit</div>
+            <ul>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="GhostWriting">Ghost Writing</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Wraith">
+            <div>Wraith</div>
+            <ul>
+                <li class="Fingerprints">Fingerprints</li>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+                <li class="SpiritBox">Spirit Box</li>
+            </ul>
+        </div>
+        <div id="Yokai">
+            <div>Yokai</div>
+            <ul>
+                <li class="SpiritBox">Spirit Box</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="GhostWriting">Ghost Writing</li>
+            </ul>
+        </div>
+        <div id="Yurei">
+            <div>Yurei</div>
+            <ul>
+                <li class="FreezingTemperatures">Freezing Temperatures</li>
+                <li class="GhostOrb">Ghost Orb</li>
+                <li class="GhostWriting">Ghost Writing</li>
+            </ul>
+        </div>
     </div>
-    <div>
-        <p>Task1: </p>
-        <p id="Task1"></p>
-    </div>
-    <div>
-        <p>Task2: </p>
-        <p id="Task2"></p>
-    </div>
-    <div>
-        <p>Task3: </p>
-        <p id="Task3"></p>
-    </div>
-    <p id="timer">0h 0m 0s</p>
-    <div id="ghostSelector">
-        <label for="EMF5" id="labelEMF5">EMF 5:</label>
-        <input type="checkbox" id="EMF5" onclick="toggleEvidence(1)"><br>
-
-        <label for="SpiritBox" id="labelSpiritBox">SpiritBox:</label>
-        <input type="checkbox" id="SpiritBox" onclick="toggleEvidence(2)"><br>
-
-        <label for="Fingerprints" id="labelFingerprints">Fingerprints:</label>
-        <input type="checkbox" id="Fingerprints" onclick="toggleEvidence(3)"><br>
-
-        <label for="GhostOrb" id="labelGhostOrb">Ghost Orb:</label>
-        <input type="checkbox" id="GhostOrb" onclick="toggleEvidence(4)"><br>
-
-        <label for="GhostWriting" id="labelGhostWriting">Ghost Writing:</label>
-        <input type="checkbox" id="GhostWriting" onclick="toggleEvidence(5)"><br>
-
-        <label for="FreezingTemperatures" id="labelFreezingTemperatures">Freezing Temperatures:</label>
-        <input type="checkbox" id="FreezingTemperatures" onclick="toggleEvidence(6)"><br>
-    </div><br>
-
-    <div id="Banshee">
-        <div>Banshee</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-        </ul>
-    </div>
-    <div id="Demon">
-        <div>Demon</div>
-        <ul>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Hantu">
-        <div>Hantu</div>
-        <ul>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-        </ul>
-    </div>
-    <div id="Jinn">
-        <div>Jinn</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Mare">
-        <div>Mare</div>
-        <ul>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Oni">
-        <div>Oni</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Phantom">
-        <div>Phantom</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-        </ul>
-    </div>
-    <div id="Poltergeist">
-        <div>Poltergeist</div>
-        <ul>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Revenant">
-        <div>Revenant</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-        </ul>
-    </div>
-    <div id="Shade">
-        <div>Shade</div>
-        <ul>
-            <li class = "EMF5">EMF5</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-        </ul>
-    </div>
-    <div id="Spirit">
-        <div>Spirit</div>
-        <ul>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Wraith">
-        <div>Wraith</div>
-        <ul>
-            <li class = "Fingerprints">Fingerprints</li>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-            <li class = "SpiritBox">Spirit Box</li>
-        </ul>
-    </div>
-    <div id="Yokai">
-        <div>Yokai</div>
-        <ul>
-            <li class = "SpiritBox">Spirit Box</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-        </ul>
-    </div>
-    <div id="Yurei">
-        <div>Yurei</div>
-        <ul>
-            <li class = "FreezingTemperatures">Freezing Temperatures</li>
-            <li class = "GhostOrb">Ghost Orb</li>
-            <li class = "GhostWriting">Ghost Writing</li>
-        </ul>
-    </div>
-
-
-
-</div>
 </body>
+
 </html>

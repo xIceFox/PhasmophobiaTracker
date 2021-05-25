@@ -1,79 +1,5 @@
 let Evidences = new Array()
 
-
-const ghostInfos = [
-    {
-        name: "Spirit",
-        evidences: [2, 3, 5],
-        active: true
-    },
-    {
-        name: "Wraith",
-        evidences: [2, 3, 6],
-        active: true
-    },
-    {
-        name: "Phantom",
-        evidences: [1, 4, 6],
-        active: true
-    },
-    {
-        name: "Poltergeist",
-        evidences: [2, 3, 4],
-        active: true
-    },
-    {
-        name: "Banshee",
-        evidences: [1, 3, 6],
-        active: true
-    },
-    {
-        name: "Jinn",
-        evidences: [1, 2, 4],
-        active: true
-    },
-    {
-        name: "Mare",
-        evidences: [2, 4, 6],
-        active: true
-    },
-    {
-        name: "Revenant",
-        evidences: [1, 3, 5],
-        active: true
-    },
-    {
-        name: "Shade",
-        evidences: [1, 4, 5],
-        active: true
-    },
-    {
-        name: "Demon",
-        evidences: [2, 5, 6],
-        active: true
-    },
-    {
-        name: "Yurei",
-        evidences: [4, 5, 6],
-        active: true
-    },
-    {
-        name: "Oni",
-        evidences: [1, 2, 5],
-        active: true
-    },
-    {
-        name: "Yokai",
-        evidences: [2, 4, 5],
-        active: true
-    },
-    {
-        name: "Hantu",
-        evidences: [3, 4, 5],
-        active: true
-    },
-];
-
 function toggleEvidence(EvidenceNumber) {
     if (Evidences.indexOf(EvidenceNumber) === -1) {
         Evidences.push(EvidenceNumber)
@@ -88,7 +14,7 @@ function toggleEvidence(EvidenceNumber) {
 
 
 function checkEvidence() {
-    ghostInfos.forEach(function (Ghost) {
+    GHOST_INFOS.forEach(function (Ghost) {
         Ghost.active = true;
         Evidences.forEach(function (clickedEvidences) {
             if (Ghost.evidences.indexOf(clickedEvidences) === -1) {
@@ -99,7 +25,7 @@ function checkEvidence() {
 }
 
 function updateGhosts() {
-    ghostInfos.forEach(function (Ghost) {
+    GHOST_INFOS.forEach(function (Ghost) {
         if (Ghost.active === false) {
             document.getElementById(Ghost.name).style.display = "none";
         } else {
@@ -111,7 +37,7 @@ function updateGhosts() {
 function checkForMissing() {
     resetRed();
     if (Evidences.length > 0) {
-        ghostInfos.forEach(function (Ghost) {
+        GHOST_INFOS.forEach(function (Ghost) {
             if (Ghost.active === true) {
                 Ghost.evidences.forEach(function (Evidence) {
                     if (Evidences.indexOf(Evidence) === -1) {
@@ -140,7 +66,7 @@ function checkIfButtonNeeded() {
     let buttonNeeded = [false, false, false, false, false, false]
     if (Evidences.length > 0) {
         for (let i = 1; i <= 6; i++) {
-            ghostInfos.forEach(function (Ghost) {
+            GHOST_INFOS.forEach(function (Ghost) {
                 if (Ghost.active === true) {
                     if (Ghost.evidences.indexOf(i) >= 0) {
                         buttonNeeded[i - 1] = true
