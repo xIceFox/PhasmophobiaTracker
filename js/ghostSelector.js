@@ -95,6 +95,7 @@ function setButtons(buttonNeeded) {
         if (needed === false) {
             let EvidenceName = getEvidenceNameByID(i + 1);
             document.getElementById("label" + EvidenceName).style.textDecorationLine = "line-through";
+            document.getElementById("label" + EvidenceName).style.color = "#808080"
             document.getElementById(EvidenceName).disabled = true;
         }
     });

@@ -15,11 +15,6 @@ li.red {
 }
 
 li.white {
-    /*color: #008120;*/
+    /* color: #008120; */
     color: #FFFFFF;
-}
-
-input:disabled,
-input:disabled + label {
-    display: none;
 }
