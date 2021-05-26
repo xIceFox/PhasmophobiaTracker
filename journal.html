@@ -14,18 +14,20 @@
     <script src="./js/dataGhosts.js"></script>
     <script src="./js/journal.js" defer></script>
     <script src="./js/timer.js" defer></script>
-    <script src="./js/ghostSelector.js"></script>
+    <script src="./js/ghostSelector.js" defer></script>
 </head>
 
 <body>
     <a href="./index.html">
         <button>Go Back to Selection</button>
     </a>
+    <hr>
     <div id="GhostNameEvidences">
         <div>
             <h2>Ghost Name: </h2>
             <h2 id="GhostName"></h2>
         </div>
+        <hr>
         <div>
             <p>Task1: </p>
             <p id="Task1"></p>
@@ -38,7 +40,9 @@
             <p>Task3: </p>
             <p id="Task3"></p>
         </div>
+        <hr>
         <p id="timer">0h 0m 0s</p>
+        <hr>
         <div id="ghostSelector">
             <input type="checkbox" id="EMF5" onclick="toggleEvidence(1)">
             <label for="EMF5" id="labelEMF5">EMF 5:</label><br>
@@ -58,7 +62,8 @@
             <input type="checkbox" id="FreezingTemperatures" onclick="toggleEvidence(6)">
             <label for="FreezingTemperatures" id="labelFreezingTemperatures">Freezing Temperatures:</label><br>
             
-        </div><br>
+        </div>
+        <hr>
         <div id="Banshee">
             <div>Banshee</div>
             <ul>

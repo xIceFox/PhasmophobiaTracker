@@ -2,8 +2,24 @@ html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    color: white;
+    background-color: #1a1a1a;
 }
 
 body {
     padding-left: 50%;
+}
+
+li.red {
+    color: #ff002b;
+}
+
+li.white {
+    /*color: #008120;*/
+    color: #FFFFFF;
+}
+
+input:disabled,
+input:disabled + label {
+    display: none;
 }

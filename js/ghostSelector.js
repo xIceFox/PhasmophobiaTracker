@@ -43,7 +43,9 @@ function checkForMissing() {
                     if (Evidences.indexOf(Evidence) === -1) {
                         let allEvidenceClass = document.getElementsByClassName(getEvidenceNameByID(Evidence));
                         for (let i = 0; i < allEvidenceClass.length; i++) {
-                            allEvidenceClass[i].style.color = 'RED';
+                            allEvidenceClass[i].classList.remove("white");
+                            allEvidenceClass[i].classList.add("red");
+                            //allEvidenceClass[i].style.color = 'RED';
                         }
                     }
                 });
@@ -56,7 +58,9 @@ function resetRed() {
     for (let i = 1; i <= 6; i++) {
         let allEvidenceClass = document.getElementsByClassName(getEvidenceNameByID(i));
         for (let i = 0; i < allEvidenceClass.length; i++) {
-            allEvidenceClass[i].style.color = 'BLACK';
+            allEvidenceClass[i].classList.remove("red");
+            allEvidenceClass[i].classList.add("white");
+            //allEvidenceClass[i].style.color = 'BLACK';
         }
     }
 }
@@ -118,3 +122,9 @@ function getEvidenceNameByID(id) {
             break;
     }
 }
+
+// TEMPORARY SOLUTION
+// let liElements = document.querySelectorAll("li").forEach(initGreenEvidences)
+// function initGreenEvidences(_element) {
+//     _element.classList.add("green")
+// }

@@ -127,22 +127,12 @@
         height: auto;
     }
 
-    .journal>.pages.right>h2 {
+    .journal>.pages.right>div {
         position: absolute;
-        text-decoration: underline dotted;
-        top: 20%;
-        left: 10%;
+        bottom: 18%;
+        right: 10%;
+        font-size: 10px;
     }
-
-    .journal>.pages.right>ul {
-        list-style:circle;
-        position: absolute;
-        padding-left: 5%;
-        top: 30%;
-        left: 10%;
-        font-size: 20px;
-    }
-
 }
 
 /* TABLET AND BIGGER */
@@ -268,24 +258,10 @@
         display: none;
     }
 
-    .journal>.pages.right>h2 {
-        position: unset;
-        top: 20%;
-        left: 10%;
-        text-decoration: underline dotted;
-        font-size: 50px;
-    }
-
-    .journal>.pages.right>ul {
-        list-style: circle;
-        position: unset;
-        padding-left: 5%;
-        top: 30%;
-        left: 10%;
-        font-size: 30px;
-    }
-
-    .journal>.pages.right>ul>li {
-        margin: 0 0 20px 0;
+    .journal>.pages.right>div {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        font-size: 16px;
     }
 }
