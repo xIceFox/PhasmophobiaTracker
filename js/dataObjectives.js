@@ -1,7 +1,7 @@
 const OBJECTIVES = {
     "de": [
         "Wählen Sie eine Option",
-        "Lassen Sie ein Teammitglied Zeuge eines Geisterevents werden",
+        "Lassen Sie ein Teammitglied Zeuge eines Geister Events werden",
         "Machen Sie ein Foto vom Geist",
         "Finden Sie Beweise für übernatürliche Ereignisse mit einem EMF Reader",
         "Stellen Sie die Anwesenheit eines Geistes anhand eines Bewegungssensors fest",
