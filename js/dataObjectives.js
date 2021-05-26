@@ -5,13 +5,13 @@ const OBJECTIVES = {
         "Machen Sie ein Foto vom Geist",
         "Finden Sie Beweise für übernatürliche Ereignisse mit einem EMF Reader",
         "Stellen Sie die Anwesenheit eines Geistes anhand eines Bewegungssensors fest",
-        "Reinigen Sie den Bereich in der Nähe des Geistes mit einem Räucherstäbchen",
+        "Reinigen Sie den Bereich in der Nähe des Geistes mit Räucherstäbchen",
         "Hindern Sie den Geist mit einem Kruzifix daran, Sie heimzusuchen",
         "Lassen Sie einen Geist durch Salz wandern",
-        "Erkennen Sie eine Geisterpräsenz mit einer Kerze",
-        "Entkommen Sie dem Geist während einer Jagd ohne Todesfälle",
-        "Verwenden Sie Smudge Sticks, während der Geist einen Spieler jagt",
-        "Erhalten Sie eine durchschnittliche geistige Gesundheit unter 25%"
+        "Bringen sie einen Geist dazu, eine Kerze auszublasen",
+        "Entkommen Sie dem Geist während einer Jagd",
+        "Verjagen Sie während einer Jagd einen Geist mit den Räucherstäbchen",
+        "Erreichen Sie einen durchschnittlichen Geisteszustandswert von unter 25%"
     ],
     "en": [
         "Choose an Option",
