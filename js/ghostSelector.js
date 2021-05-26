@@ -86,6 +86,7 @@ function resetButtons() {
     for (let i = 1; i <= 6; i++) {
         let EvidenceName = getEvidenceNameByID(i);
         document.getElementById("label" + EvidenceName).style.textDecorationLine = "none";
+        document.getElementById("label" + EvidenceName).style.color = "#FFFFFF";
         document.getElementById(EvidenceName).disabled = false;
     }
 }
@@ -95,7 +96,7 @@ function setButtons(buttonNeeded) {
         if (needed === false) {
             let EvidenceName = getEvidenceNameByID(i + 1);
             document.getElementById("label" + EvidenceName).style.textDecorationLine = "line-through";
-            document.getElementById("label" + EvidenceName).style.color = "#808080"
+            document.getElementById("label" + EvidenceName).style.color = "#808080";
             document.getElementById(EvidenceName).disabled = true;
         }
     });
