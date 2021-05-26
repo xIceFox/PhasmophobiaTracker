@@ -18,10 +18,6 @@ if(task3>0)task3Element.appendChild(document.createTextNode(OBJECTIVES.en[task3]
 let resetButton = document.querySelector("#reset")
 resetButton.addEventListener("click", resetPage)
 
-function resetPage() {
-    window.location = "../index.html"
-}
-
 
 
 
