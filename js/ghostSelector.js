@@ -43,7 +43,7 @@ function checkForMissing() {
                     if (Evidences.indexOf(Evidence) === -1) {
                         let allEvidenceClass = document.getElementsByClassName(getEvidenceNameByID(Evidence));
                         for (let i = 0; i < allEvidenceClass.length; i++) {
-                            allEvidenceClass[i].classList.remove("white");
+                            allEvidenceClass[i].classList.remove("black");
                             allEvidenceClass[i].classList.add("red");
                             //allEvidenceClass[i].style.color = 'RED';
                         }
@@ -59,7 +59,7 @@ function resetRed() {
         let allEvidenceClass = document.getElementsByClassName(getEvidenceNameByID(i));
         for (let i = 0; i < allEvidenceClass.length; i++) {
             allEvidenceClass[i].classList.remove("red");
-            allEvidenceClass[i].classList.add("white");
+            allEvidenceClass[i].classList.add("black");
             //allEvidenceClass[i].style.color = 'BLACK';
         }
     }
@@ -86,7 +86,7 @@ function resetButtons() {
     for (let i = 1; i <= 6; i++) {
         let EvidenceName = getEvidenceNameByID(i);
         document.getElementById("label" + EvidenceName).style.textDecorationLine = "none";
-        document.getElementById("label" + EvidenceName).style.color = "#FFFFFF";
+        document.getElementById("label" + EvidenceName).style.color = "#000000";
         document.getElementById(EvidenceName).disabled = false;
     }
 }

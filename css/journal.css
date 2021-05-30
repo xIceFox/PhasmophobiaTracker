@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -15,6 +15,286 @@ li.red {
 }
 
 li.white {
-    /* color: #008120; */
+    color: #008120;
     color: #FFFFFF;
+} */
+
+@media only screen and (min-width: 0px) {
+    /* GENERAL */
+
+    body,
+    html {
+        margin: 0;
+    }
+
+    html {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../media/img/truck.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* LANGSWITCH */
+
+    #langSwitch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        box-sizing: border-box;
+        border: solid black 2px;
+        border-radius: 50px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #langSwitch:hover {
+        cursor: pointer;
+    }
+
+    /* JOURNAL GENERAL */
+
+    .journal {
+        position: unset;
+        width: 95%;
+        height: 90%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-content: flex-start;
+    }
+
+    .journal>embed {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    .journal>.pages {
+        position: unset;
+
+        width: 100%;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* JOURNAL LEFT */
+
+    .journal>.pages.left>form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .journal>.pages.left>form>select {
+        width: 100%;
+    }
+
+    .journal>.pages.left>form>label {
+        font-size: 25px;
+        text-shadow: 1px 1px white;
+    }
+
+    .journal>.pages.left>form>input[type="submit"] {
+        float: right;
+    }
+
+    .journal>.pages.left>form>input:nth-of-type(1) {
+        width: 50%;
+        margin: 0 0 30px 0
+    }
+
+    .journal>.pages.left>form>input,
+    .journal>.pages.left>form>select {
+        margin: 0 0 20px 0;
+        padding: 3px 3px 3px 3px;
+
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.75);
+
+        appearance: none;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    /* JOURNAL RIGHT */
+
+    .journal>.pages.right {
+        position: relative;
+        justify-content: center;
+    }
+
+    .journal>.pages.right>embed {
+        width: 100%;
+        height: auto;
+    }
+
+    .journal>.pages.right>div {
+        position: absolute;
+        bottom: 18%;
+        right: 10%;
+        font-size: 10px;
+    }
+}
+
+/* TABLET AND BIGGER */
+@media only screen and (min-width: 450px) {
+    /* GENERAL */
+
+    body,
+    html {
+        margin: 0;
+    }
+
+    html {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../media/img/truck.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* JOURNAL GENERAL */
+
+    .journal {
+        position: relative;
+        width: auto;
+        height: 80%;
+
+        display: block
+    }
+
+    .journal>embed {
+        display: unset;
+        width: 100%;
+        height: 100%;
+        filter:brightness(50%)
+    }
+
+    .journal>.pages {
+        position: absolute;
+        top: calc(0% + 50px);
+
+        width: calc(40%);
+        height: calc(100% - 110px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .journal>.pages.left {
+        left: calc(7%);
+    }
+
+    .journal>.pages.right {
+        left: calc(50%);
+    }
+
+    /* JOURNAL LEFT */
+
+    .journal>.pages.left>form {
+        width: 100%;
+        height: 100%;
+    }
+
+    .journal>.pages.left>form>select {
+        width: 100%;
+    }
+
+    .journal>.pages.left>form>label {
+        font-size: 35px;
+    }
+
+    .journal>.pages.left>form>input[type="submit"] {
+        float: right;
+    }
+
+    .journal>.pages.left>form>input:nth-of-type(1) {
+        width: 50%;
+        margin: 0 0 50px 0
+    }
+
+    .journal>.pages.left>form>input,
+    .journal>.pages.left>form>select {
+        margin: 0 0 20px 0;
+        padding: 3px 3px 3px 3px;
+
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgba(124, 54, 0, 0.2);
+
+        appearance: none;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .journal>.pages.left>form>input:hover,
+    .journal>.pages.left>form>select:hover {
+        background-color: rgba(124, 54, 0, 0.3);
+    }
+
+    /* JOURNAL RIGHT */
+
+    .journal>.pages.right {
+        position: absolute;
+        justify-content: flex-start;
+        overflow-y: scroll;
+    }
+
+    .journal>.pages.right>div {
+        position: unset;
+        font-size: 20px;
+    }
+
+    details:hover {
+        cursor: pointer;
+    }
+
+    details:focus-visible {
+        outline: none;
+    }
+
+    /* .journal>.pages.right>embed {
+        display: none;
+    }
+
+    .journal>.pages.right>div {
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        font-size: 16px;
+    } */
 }

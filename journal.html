@@ -18,163 +18,239 @@
 </head>
 
 <body>
-    <a href="./index.html">
-        <button>Go Back to Selection</button>
-    </a>
-    <hr>
-    <div id="GhostNameEvidences">
-        <div>
-            <h2>Ghost Name: </h2>
-            <h2 id="GhostName"></h2>
+    <div class="journal">
+        <embed src="./media/img/bookBackgroundUI.png" alt="Journal">
+        <div class="pages left">
+            <a href="./index.html">
+                <button>Go Back to Selection</button>
+            </a>
+            <hr>
+            <div id="GhostNameEvidences">
+                <div>
+                    <h2>Ghost Name: </h2>
+                    <h2 id="GhostName"></h2>
+                </div>
+                <hr>
+                <div>
+                    <p>Task1: </p>
+                    <p id="Task1"></p>
+                </div>
+                <div>
+                    <p>Task2: </p>
+                    <p id="Task2"></p>
+                </div>
+                <div>
+                    <p>Task3: </p>
+                    <p id="Task3"></p>
+                </div>
+                <hr>
+                <p id="timer">0h 0m 0s</p>
+            </div>
+            <div id="ghostSelector">
+                <input type="checkbox" id="EMF5" onclick="toggleEvidence(1)">
+                <label for="EMF5" id="labelEMF5">EMF 5:</label><br>
+                <input type="checkbox" id="SpiritBox" onclick="toggleEvidence(2)">
+                <label for="SpiritBox" id="labelSpiritBox">SpiritBox:</label><br>
+                <input type="checkbox" id="Fingerprints" onclick="toggleEvidence(3)">
+                <label for="Fingerprints" id="labelFingerprints">Fingerprints:</label><br>
+                <input type="checkbox" id="GhostOrb" onclick="toggleEvidence(4)">
+                <label for="GhostOrb" id="labelGhostOrb">Ghost Orb:</label><br>
+                <input type="checkbox" id="GhostWriting" onclick="toggleEvidence(5)">
+                <label for="GhostWriting" id="labelGhostWriting">Ghost Writing:</label><br>
+                <input type="checkbox" id="FreezingTemperatures" onclick="toggleEvidence(6)">
+                <label for="FreezingTemperatures" id="labelFreezingTemperatures">Freezing Temperatures:</label><br>
+            </div>
         </div>
-        <hr>
-        <div>
-            <p>Task1: </p>
-            <p id="Task1"></p>
-        </div>
-        <div>
-            <p>Task2: </p>
-            <p id="Task2"></p>
-        </div>
-        <div>
-            <p>Task3: </p>
-            <p id="Task3"></p>
-        </div>
-        <hr>
-        <p id="timer">0h 0m 0s</p>
-        <hr>
-        <div id="ghostSelector">
-            <input type="checkbox" id="EMF5" onclick="toggleEvidence(1)">
-            <label for="EMF5" id="labelEMF5">EMF 5:</label><br>
-            
-            <input type="checkbox" id="SpiritBox" onclick="toggleEvidence(2)">
-            <label for="SpiritBox" id="labelSpiritBox">SpiritBox:</label><br>
-            
-            <input type="checkbox" id="Fingerprints" onclick="toggleEvidence(3)">
-            <label for="Fingerprints" id="labelFingerprints">Fingerprints:</label><br>
-            
-            <input type="checkbox" id="GhostOrb" onclick="toggleEvidence(4)">
-            <label for="GhostOrb" id="labelGhostOrb">Ghost Orb:</label><br>
-            
-            <input type="checkbox" id="GhostWriting" onclick="toggleEvidence(5)">
-            <label for="GhostWriting" id="labelGhostWriting">Ghost Writing:</label><br>
-            
-            <input type="checkbox" id="FreezingTemperatures" onclick="toggleEvidence(6)">
-            <label for="FreezingTemperatures" id="labelFreezingTemperatures">Freezing Temperatures:</label><br>
-            
-        </div>
-        <hr>
-        <div id="Banshee">
-            <div>Banshee</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-            </ul>
-        </div>
-        <div id="Demon">
-            <div>Demon</div>
-            <ul>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-                <li class="GhostWriting">Ghost Writing</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Hantu">
-            <div>Hantu</div>
-            <ul>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="GhostWriting">Ghost Writing</li>
-            </ul>
-        </div>
-        <div id="Jinn">
-            <div>Jinn</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Mare">
-            <div>Mare</div>
-            <ul>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Oni">
-            <div>Oni</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="GhostWriting">Ghost Writing</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Phantom">
-            <div>Phantom</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-                <li class="GhostOrb">Ghost Orb</li>
-            </ul>
-        </div>
-        <div id="Poltergeist">
-            <div>Poltergeist</div>
-            <ul>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Revenant">
-            <div>Revenant</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="GhostWriting">Ghost Writing</li>
-            </ul>
-        </div>
-        <div id="Shade">
-            <div>Shade</div>
-            <ul>
-                <li class="EMF5">EMF5</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="GhostWriting">Ghost Writing</li>
-            </ul>
-        </div>
-        <div id="Spirit">
-            <div>Spirit</div>
-            <ul>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="GhostWriting">Ghost Writing</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Wraith">
-            <div>Wraith / Gespenst</div>
-            <ul>
-                <li class="Fingerprints">Fingerprints</li>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-                <li class="SpiritBox">Spirit Box</li>
-            </ul>
-        </div>
-        <div id="Yokai">
-            <div>Yokai</div>
-            <ul>
-                <li class="SpiritBox">Spirit Box</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="GhostWriting">Ghost Writing</li>
-            </ul>
-        </div>
-        <div id="Yurei">
-            <div>Yurei</div>
-            <ul>
-                <li class="FreezingTemperatures">Freezing Temperatures</li>
-                <li class="GhostOrb">Ghost Orb</li>
-                <li class="GhostWriting">Ghost Writing</li>
-            </ul>
+        <div class="pages right">
+            <!-- <embed src="./media/img/bookBackgroundUI.png" alt="Journal"> -->
+            <div id="Banshee">
+                <details>
+                    <summary>Banshee</summary>
+                    <p> Ein Banshee ist ein Jäger und wird alles attackieren. Sie ist bekannt dafür, ihre Opfer zu
+                        stalek bis Sie jemanden tötet. </p>
+                    <p> Stärken: Ein Banshee wird jeweils nur eine Person jagen. </p>
+                    <p> Schwächen: Banshees fürchten das Kruzifix und sind weniger aggressiv in seinem Umkreis. </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                </ul>
+            </div>
+            <div id="Demon">
+                <details>
+                    <summary>Demon</summary>
+                    <p> Ein Dämon ist einer der schlimmsten Geister, die man finden kann. Er ist bekannt dafür, ohne
+                        Sinn und Verstand anzugreifen. </p>
+                    <p> Stärken: Dämonen greifen viel öfter an als andere Geister. </p>
+                    <p> Schwächen: Erfolgreiche Befragungen des Ouija-Boards über den Dämonen verringern nicht den
+                        Geisterzustand </p>
+                </details>
+                <ul>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Hantu">
+                <details>
+                    <summary>Hantu</summary>
+                    <p> [noch nicht verfügbar] </p>
+                    <p> Stärken: [noch nicht verfügbar] </p>
+                    <p> Schwächen: [noch nicht verfügbar] </p>
+                </details>
+                <ul>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                </ul>
+            </div>
+            <div id="Jinn">
+                <details>
+                    <summary>Jinn / Dschinn</summary>
+                    <p> Ein Dschinn ist ein territorialer Geist, der bei Bedrängnis angreift. Er ist ebenfalls bekannt
+                        dafür, sich mit hoher Geschwindigkeit zu bewegen. </p>
+                    <p> Stärken: Ein Dschinn bewegt sich schneller, wenn sein Opfer weit weg ist. </p>
+                    <p> Schwächen: Dem Ort seinen Strom zu entziehen hindert den Dschinn am Nutzen seiner Fähigkeiten.
+                    </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Mare">
+                <details>
+                    <summary>Mare</summary>
+                    <p> Eine Mare ist die Quelle von allen Albträumen. Sie wird bei Nacht am stärksten. Es wird erzählt, dass eine Mare den Verstand von Menschen kontrollieren kann. </p>
+                    <p> Stärken: Eine Mare hat eine erhöhrte Chance anzugreifen, wenn Sie sich im Dunkeln aufhalten. </p>
+                    <p> Schwächen: Schaltet man die Lichter um eine Mare ein, ist die Chance, angegriffen zu werden, eher gering.</p>
+                </details>
+                <ul>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Oni">
+                <details>
+                    <summary>Oni</summary>
+                    <p> Onis sind Verwandte des Dämons und besitzen unglaubliche Stärke. Gerüchten zufolge sind sie aktiver in der Nähe ihres Opfers. </p>
+                    <p> Stärken: Onis bewegen Objekte mit großer Geschwindigkeit und sind aktiver, wenn Leute in der Nähe sind. </p>
+                    <p> Schwächen: Durch ihre hohe Aktivitätsrate sind Onis leichter zu erkennen. </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Phantom">
+                <details>
+                    <summary>Hantu</summary>
+                    <p> Ein Phantom ist ein Geist, der von Lebenden Besitz ergreifen kann. Meistens beschworen durch das Ouijaboard. Verursacht Angst in den Menschen um ihn herum. </p>
+                    <p> Stärken: Senkt Ihren Verstand stark, wenn Sie das Phantom anschauen. </p>
+                    <p> Schwächen: Fotografieren Sie das Phantom, verschwindet es temporär. </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                </ul>
+            </div>
+            <div id="Poltergeist">
+                <details>
+                    <summary>Poltergeist</summary>
+                    <p> Einer der berühmtesten Geister. Ein Poltergeist ist bekannt als ein Wesen, das laut ist und Objekte um sich herum manipuliert, um seinen Opfern Angst einzujagen. </p>
+                    <p> Stärken: Ein Poltergeist kann viele Objekte auf einmal werfen. </p>
+                    <p> Schwächen: Ein Poltergeist ist in einem leeren Raum fast ineffektiv. </p>
+                </details>
+                <ul>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Revenant">
+                <details>
+                    <summary>Revenant</summary>
+                    <p> Ein Revenant ist langsam, aber attackiert heftiv und wahllos. Gerüchten zufolge ist ein Revenant schneller, wenn er jemanden jagt. </p>
+                    <p> Stärken: Wird schneller, wenn er sein Opfer jagt. </p>
+                    <p> Schwächen: Versteckt man sich vor dem Revenant, bewegt er sich sehr langsam </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                </ul>
+            </div>
+            <div id="Shade">
+                <details>
+                    <summary>Shade</summary>
+                    <p> Der Shade ist bekannt als ein schüchterner Geist. Wenn mehrere Menschen zusammen sind, werden alle paranormale Aktivitäten gestoppt. </p>
+                    <p> Stärken: Schüchtern zu sein bedeutet, es wird schwerer den Geist zu entdecken. </p>
+                    <p> Schwächen: Der Geist wird nicht jagen, wenn mehrere Menschen zusammen sind. </p>
+                </details>
+                <ul>
+                    <li class="EMF5">EMF5</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                </ul>
+            </div>
+            <div id="Spirit">
+                <details>
+                    <summary>Spirit</summary>
+                    <p> Der Spirit ist eine der gewöhnlichsten Geisterarten, jedoch ist er sehr stark und gefährlich. Er wird für gewöhnlich in einem Gebiet gefunden, in dem der Tod einer Person unaufgeklärt blieb. </p>
+                    <p> Stärken: Keine </p>
+                    <p> Schwächen: Kann vorrübergehend gestoppt werden, indem man den Geisterraum ausräuchert. </p>
+                </details>
+                <ul>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Wraith">
+                <details>
+                    <summary>Wraith / Gespenst</summary>
+                    <p> Ein Gespenst ist einer der gefährlichsten Geister, die Sie finden werden. Er ist auch bekannt dafür, fliegen und durch Wände gehen zu können. </p>
+                    <p> Stärken: Ein Gespenst berührt nie den Boden, wodurch er nicht durch Fußabdrücke gefunden werden kann. </p>
+                    <p> Schwächen: Giftige Reaktion auf Salz. </p>
+                </details>
+                <ul>
+                    <li class="Fingerprints">Fingerprints</li>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                    <li class="SpiritBox">Spirit Box</li>
+                </ul>
+            </div>
+            <div id="Yokai">
+                <details>
+                    <summary>Yokai</summary>
+                    <p> [nicht nicht verfügbar] </p>
+                    <p> Stärken: [nicht nicht verfügbar] </p>
+                    <p> Schwächen: [nicht nicht verfügbar] </p>
+                </details>
+                <ul>
+                    <li class="SpiritBox">Spirit Box</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                </ul>
+            </div>
+            <div id="Yurei">
+                <details>
+                    <summary>Yurei</summary>
+                    <p> Ein Yurei ist ein Geist, der aus Gründen des Hasses oder einer unerfüllten Rache in die
+                        physische Welt zurückkehrte. </p>
+                    <p> Stärken: Yureis haben einen stärkeren Einfluss auf den Geisteszustand von Menschen </p>
+                    <p> Schwächen: Wenn Sie den Raum des Yurei ausräuchern, wird er für längere Zeit seine Bewegung einstellen. </p>
+                </details>
+                <ul>
+                    <li class="FreezingTemperatures">Freezing Temperatures</li>
+                    <li class="GhostOrb">Ghost Orb</li>
+                    <li class="GhostWriting">Ghost Writing</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
