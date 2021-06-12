@@ -198,7 +198,8 @@ button {
     .journal {
         position: relative;
         width: auto;
-        height: 80%;
+        height: 95%;
+        width: 70%;
 
         display: block
     }
@@ -255,9 +256,10 @@ button {
     }
 
     .journal>.pages.left>form>input,
-    .journal>.pages.left>form>select {
+    .journal>.pages.left>form>select,
+    .BackButton{
         margin: 0 0 20px 0;
-        padding: 3px 3px 3px 3px;
+        padding: 1px 3px 1px 3px;
 
         border: 2px solid black;
         border-radius: 5px;
